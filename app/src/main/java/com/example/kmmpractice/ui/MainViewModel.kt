@@ -2,6 +2,7 @@ package com.example.kmmpractice.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.kmmpractice.common.presentation.MainViewState
 import com.example.kmmpractice.common.repository.HelloWorldRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
