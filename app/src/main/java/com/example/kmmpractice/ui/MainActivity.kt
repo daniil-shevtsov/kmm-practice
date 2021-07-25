@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.activity_main)
 
         findViewById<ComposeView>(R.id.compose_view).setContent {
-            Text("Hello")
+            MainLayout()
         }
     }
 }
