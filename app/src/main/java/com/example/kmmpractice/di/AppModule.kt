@@ -6,11 +6,8 @@ import com.example.kmmpractice.ui.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-fun provideHelloWorldRepository(): HelloWorldRepository = HelloWorldRepositoryImpl()
 
 val appModule = module {
-    single { provideHelloWorldRepository() }
-    
     viewModel {
         MainViewModel(
             helloWorldRepository = get()
