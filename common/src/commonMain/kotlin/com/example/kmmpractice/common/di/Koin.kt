@@ -1,5 +1,6 @@
 package com.example.kmmpractice.common.di
 
+import com.example.kmmpractice.common.presentation.MainViewModel
 import com.example.kmmpractice.common.repository.HelloWorldRepository
 import com.example.kmmpractice.common.repository.HelloWorldRepositoryImpl
 import org.koin.core.context.startKoin
@@ -14,6 +15,13 @@ fun initKoin(appDeclaration: KoinAppDeclaration = {}) =
 
 fun commonModule() = module {
     single { provideHelloWorldRepository() }
+
+    //TODO: Come up with some sane solution for viewmodel and its lifecycle
+    single { provideMainViewModel(helloWorldRepository = get()) }
 }
 
 fun provideHelloWorldRepository(): HelloWorldRepository = HelloWorldRepositoryImpl()
+
+fun provideMainViewModel(
+    helloWorldRepository: HelloWorldRepository
+) = MainViewModel(helloWorldRepository)
