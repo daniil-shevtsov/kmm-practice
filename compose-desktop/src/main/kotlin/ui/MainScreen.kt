@@ -2,6 +2,7 @@ package ui
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
+import com.example.kmmpractice.common.presentation.MainViewModel
 import di.koin
 
 @Composable

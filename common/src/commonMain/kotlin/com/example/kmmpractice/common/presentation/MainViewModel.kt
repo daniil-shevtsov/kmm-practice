@@ -1,4 +1,4 @@
-package ui
+package com.example.kmmpractice.common.presentation
 
 import com.example.kmmpractice.common.repository.HelloWorldRepository
 import com.example.kmmpractice.common.presentation.MainViewState
